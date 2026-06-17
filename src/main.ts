@@ -84,6 +84,6 @@ export default defineAgent<ProcessUserData>({
 cli.runApp(
   new ServerOptions({
     agent: fileURLToPath(import.meta.url),
-    agentName: 'my-agent',
+    agentName: process.env.AGENT_NAME!,
   }),
 );
